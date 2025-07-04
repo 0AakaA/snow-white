@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/index_stile.css">
+
+  <title>Snow White</title>
+
+  <!-- estos son los links para que funcione bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav class="border-bottom">
+    <div class="d-flex justify-content-between align-items-center p-3">
+      <div class="d-flex justify-content-left">
+        <div class="manzana-container" id="manzana">
+          <img src="img/icono.manzana.png" alt="Manzana" class="manzana-img frente">
+          <img src="img/icono.manzana-mordida.png" alt="Manzana envenenada" class="manzana-img dorso">
+        </div>
+        <h1 class="titulo">Snow White</h1>
+      </div>
+      <a class="idioma" href="index_español.html">Change language</a>
+    </div>
+    <div class="d-flex justify-content-around p-2 navabajo">
+      <a class="linknav" href="https://www.linguee.es/ingles-espanol">Dictionary</a>
+      <a class="linknav"
+        href="https://es.educaplay.com/recursos-educativos/24293378-memoria_de_blancanieves.html">Memory game</a>
+    </div>
+  </nav>
+
+  <div class="audio-center">
+    <h2>⇊ Here you can listen to the audiobook ⇊</h2>
+  </div>
+
+  <div class="audio-center">
+    <audio src="audio_libros/audio-ingles.mp3" controls></audio>
+  </div>
+
+  <div class="container my-4">
+    <div class="row">
+      <!-- Columna izquierda: el cuento -->
+      <div class="col-lg-8 mb-4">
+        <div class="cuento p-3 border rounded">
+          <p>Once upon a time in a distant kingdom, a queen both fair and kind longed for a child. One day, while sewing
+            next to an open window, she pricked her finger, and three drops of blood fell onto the snow. Looking at the
+            beautiful blend of colors, the queen wished for a daughter with skin as white as snow, lips as red as blood,
+            and hair as black as ebony. <br>
+            Her wish came true when she gave birth to a beautiful girl named Snow White. However, happiness was
+            short-lived as the queen died shortly after the girl’s birth. The king, in his loneliness, remarried a woman
+            of great beauty but also of a cold and vain heart. <br>
+            The new queen possessed a magical mirror, which she consulted every day, asking, «Mirror, mirror on the
+            wall, who’s the fairest of them all?» The mirror always responded that she was the fairest, until one day,
+            it revealed that Snow White, who had now grown up, was the most beautiful. <br>
+            Jealous and enraged, the queen ordered her hunter to take Snow White into the forest and kill her. However,
+            the kind-hearted man couldn’t harm her and advised her to flee. Snow White ran until she found a small
+            house, home to seven dwarfs, who took her in with love. <br>
+            Some time later, the queen discovered that Snow White was still alive and tried to kill her on three
+            separate occasions: with a tight corset, with a poisoned comb, and finally, with a poisoned apple. The
+            dwarfs were able to save her the first two times, but the apple left her in a death-like state. <br>
+            A prince passing through the forest saw Snow White in her glass coffin and fell in love with her. Upon
+            kissing her, the piece of poisoned apple dislodged from her throat, waking her from her comatose state. The
+            prince and Snow White returned to the kingdom, where the wicked queen was punished, and they lived happily
+            ever after. <br>
+            And so, in a world where goodness triumphed over evil, Snow White and her prince lived happily to the end of
+            their days. <br>
+            THE END.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Columna derecha: gif, diccionario, juego -->
+      <div class="col-lg-4">
+        <div class="gif mb-4">
+          <!-- Aca podés insertar un gif o imagen -->
+          <img id="gif-educativo" src="img/gif.vertical.abajo.gif" alt="gif educativo" class="img-fluid rounded shadow">
+        </div>
+
+        <div class="cuadro p-3 mb-4">
+          <h5><b>Dictionary</b></h5>
+          <p>In this section, you can access a dictionary. If there are any words you don't know, you can look them up here.</p>
+          <a class="idioma" href="https://www.linguee.es/ingles-espanol" target="_blank">Click here!</a>
+        </div>
+
+        <div class="cuadro p-3 mb-4">
+          <h5><b>Memory game (memotest)</b></h5>
+          <p>In this section you can play a memory test game about Snow White.</p>
+          <a class="idioma" href="https://es.educaplay.com/recursos-educativos/24293378-memoria_de_blancanieves.html" target="_blank">Click here!</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <script>
+      const manzana = document.getElementById('manzana');
+      const body = document.body;
+      const nav = document.querySelector('nav');
+      const navabajo = document.querySelector('.navabajo');
+      const titulo = document.querySelector('.titulo');
+      const cuento = document.querySelector('.cuento');
+      const cuadros = document.querySelectorAll('.cuadro');
+      const idiomas = document.querySelectorAll('.idioma');
+      const linknavs = document.querySelectorAll('.linknav');
+      const audio = document.querySelector('audio');
+      const gif = document.getElementById('gif-educativo');
+
+      const gifNormal = "img/gif.vertical.abajo.gif";
+      const gifEnvenenado = "img/gif.vertical.envenenado.gif";
+
+      manzana.addEventListener('click', () => {
+      manzana.classList.toggle('girar');
+      body.classList.toggle('envenenado');
+      nav.classList.toggle('envenenado');
+      navabajo.classList.toggle('envenenado');
+      titulo.classList.toggle('envenenado');
+      cuento.classList.toggle('envenenado');
+      audio.classList.toggle('envenenado');
+
+      cuadros.forEach(cuadro => cuadro.classList.toggle('envenenado'));
+      idiomas.forEach(idioma => idioma.classList.toggle('envenenado'));
+      linknavs.forEach(link => link.classList.toggle('envenenado'));
+
+      // Cambiar el gif
+      if (body.classList.contains('envenenado')) {
+        gif.src = gifEnvenenado;
+      } else {
+        gif.src = gifNormal;
+      }
+      });
+  </script>
+</body>
+
+</html>
