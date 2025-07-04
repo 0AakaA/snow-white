@@ -1,0 +1,239 @@
+  body{
+    background-color: #FAEEE4 !important;
+    transition: 0.3s;
+  }
+
+  .titulo{
+    color: #711F24;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.3s;
+  }
+
+  nav{
+    background-color: #A5DA8C;
+  }
+
+  .navabajo{
+    background-color: #60854E;
+  }
+  
+.idioma {
+  padding: 10px 20px;
+  background-color: #E25862; /* azul Bootstrap */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.linknav{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.audio-center {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.audio-center audio {
+  border: 2px solid #60854E;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #A5DA8C;
+}
+
+.cuento {
+  background-color: #fffaf5;         /* Fondo suave tipo pergamino */
+  color: #632127;                    /* Marrón oscuro para buena lectura */
+  line-height: 1.6;                 /* Espaciado cómodo entre líneas */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera */
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #d9b08c;
+}
+
+.cuadro {
+  background-color: #fffaf5;         /* Fondo suave tipo pergamino */
+  color: #1b0103;                    /* Marrón oscuro para buena lectura */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera */
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #d9b08c;
+  transition: 0.3s;
+}
+/* animaciones */
+.idioma:active{
+  scale: 0.9;
+}
+.idioma:hover{
+  background-color: #d83e48;
+}
+.titulo:hover{
+  cursor: pointer;
+}
+.linknav:hover{
+  color: #b7e4a2;
+}
+.linknav:active{
+  scale: 0.9;
+  color: white;
+}
+.cuadro:hover{
+  background-color: #f1f1f1;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+}
+.gif{
+  transition: 0.3s;
+}
+.gif:hover{
+  scale: 1.01;
+}
+.cuento:hover{
+  transition: 0.3s;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+}
+/* manzana transicion */
+.manzana-container {
+  width: 60px;
+  height: 60px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manzana-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  backface-visibility: hidden;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+
+.manzana-img.dorso {
+  transform: rotateY(180deg);
+}
+
+.manzana-container.girar .frente {
+  transform: rotateY(180deg);
+}
+
+.manzana-container.girar .dorso {
+  transform: rotateY(360deg);
+}
+.manzana-container:hover{
+  animation: rotate624 0.7s ease-in-out both;
+}
+.manzana-container:active{
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+.manzana-container:active{
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+/* animacion de envenenado a la pagina (modo oscuro) */
+body.envenenado {
+  background-color: #1a0014 !important;
+  color: #ffe6f0;
+}
+
+nav.envenenado {
+  background-color: #59003c !important;
+}
+
+.navabajo.envenenado {
+  background-color: #3a0028 !important;
+}
+
+.titulo.envenenado {
+  color: #ff9ccf !important;
+}
+
+.cuento.envenenado {
+  background-color: #2e001f !important;
+  color: #ffcce5 !important;
+  border-color: #a2005a !important;
+}
+
+.cuadro.envenenado {
+  background-color: #3f002b !important;
+  color: #ffd6ea !important;
+  border-color: #a2005a !important;
+}
+
+.idioma.envenenado {
+  background-color: #a2005a !important;
+  color: #ffe6f0 !important;
+}
+
+.idioma.envenenado:hover {
+  background-color: #8a004c !important;
+}
+
+.linknav.envenenado {
+  color: #ffd1e5 !important;
+}
+
+.linknav.envenenado:hover {
+  color: #ffeff7 !important;
+}
+
+audio.envenenado {
+  border-color: #a2005a !important;
+  background-color: #3b0020 !important;
+}
+
